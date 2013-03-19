@@ -1,4 +1,7 @@
+.gitignore
 .project
+*.gitignore
+*.project
 *.class
 *.classpath
 *.project
@@ -8,6 +11,20 @@ org.eclipse.wst.common.component
 MANIFEST.MF
 /.settings
 pom.xml
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
 
 # Package Files #
 *.war
