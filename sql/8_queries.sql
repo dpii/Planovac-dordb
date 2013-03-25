@@ -1,10 +1,12 @@
 --Určí počet uživatelů, kteří mají v daný čas již vytvořenou událost v rámci skupiny
 
 
-select count(*) from (select id_uzivatele from udalosti where zacatek > '10/10/2009' and konec < '10/10/2010') where    ;
-
-
-select * from (select distinct idUzivatele from UzivatelSkupina where idSkupiny = 9);
+select count(*) from uzivatele uz, udalosti ud, pripominky pr, skupiny_uzivatelu us, skupiny sk
+where pr.iduzivatele = ud.idVlastnikaUz
+and uz.idUzivatele = ud.idVlastnikaUz
+and	us.idUzivatele = ud.idVlastnikaUz
+and ud.zacatek > '10/10/2009' and ud.konec < '10/10/2015'
+and sk.idSkupiny = 9;
 
 --Vypočte průměrný počet přípomínek uživatelů.
 select distinct idVlastnika, count(idUdalosti) from Udalost;
@@ -14,8 +16,10 @@ select distinct idVlastnika, count(idUdalosti) from Udalost;
 
 
 
+
+
 --Zjistí počet vedoucích skupin
-select 
+select count(distinct idVedouciho) from skupiny;
 
 
 --Vyhledá nejvyýše čtyři posledni události pro každého uživatele.
