@@ -5,7 +5,7 @@ select count(*) from uzivatele uz, udalosti ud, pripominky pr, skupiny_uzivatelu
 where pr.iduzivatele = ud.idVlastnikaUz
 and uz.idUzivatele = ud.idVlastnikaUz
 and	us.idUzivatele = ud.idVlastnikaUz
-and ud.zacatek > '10/10/2009' and ud.konec < '10/10/2015'
+and ud.zacatek > '10/10/2013' and ud.konec < '10/10/2015'
 and sk.idSkupiny = 9;
 
 --Vypočte průměrný počet přípomínek uživatelů.

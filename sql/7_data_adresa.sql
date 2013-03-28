@@ -113,7 +113,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('71537','5541
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('U9H 1P4','267-1021 Porttitor Ave','1188','Jackson','erat volutpat. Nulla dignissim. Maecenas ornare egestas');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('32656','625-6168 Risus Ave','1065','Newark','tempus risus.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('92852','9245 Nibh. Rd.','117','Mussy-la-Ville','sed, hendrerit a, arcu.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('06130','773-991 At Rd.','974','Ougre','Proin vel nisl. Quisque fringilla euismod enim.');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('06130','773-991 At Rd.','974','Ougr?e','Proin vel nisl. Quisque fringilla euismod enim.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('58399','218-6535 Odio. Avenue','584','South Perth','In ornare sagittis felis. Donec tempor, est ac mattis');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('20930','1434 Sem. St.','1397','Sint-Ulriks-Kapelle','mollis. Phasellus libero');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L3X 7S1','2708 Dis St.','236','Deventer','libero nec ligula consectetuer rhoncus. Nullam velit');
@@ -146,8 +146,8 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('C3P 3R1','88
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('20549','164-4310 Magnis Rd.','698','Fort Smith','velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('19542','932-5138 Ultrices, Avenue','1244','Colchester','auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('90460','P.O. Box 811, 155 Amet Ave','371','Canning','dis parturient montes, nascetur ridiculus mus. Proin vel arcu');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L9D 8T7','Ap #648-4267 Augue Street','572','Ferrires','Cras sed leo. Cras vehicula aliquet libero. Integer');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('J6Q 1Z7','P.O. Box 372, 8278 Vitae, Rd.','651','Bertre','non dui nec');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L9D 8T7','Ap #648-4267 Augue Street','572','Ferri?res','Cras sed leo. Cras vehicula aliquet libero. Integer');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('J6Q 1Z7','P.O. Box 372, 8278 Vitae, Rd.','651','Bertr?e','non dui nec');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('76790','Ap #709-2901 Enim. Road','1472','Ramsey','faucibus orci luctus et ultrices posuere cubilia Curae;');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('22757','648-8628 Venenatis Av.','663','Arviat','nibh lacinia');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('79842','290-9271 Tellus. Rd.','852','Forfar','semper pretium neque. Morbi quis urna. Nunc quis arcu vel');
@@ -203,9 +203,9 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('W8O 4I3','Ap
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('54417','509-159 Urna. Avenue','389','Newbury','aliquet. Proin velit. Sed malesuada augue ut lacus.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('I6L 8R7','P.O. Box 852, 7354 Ante, St.','263','Lawton','Morbi neque tellus, imperdiet non, vestibulum nec, euismod in, dolor.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('82193','4733 Diam Ave','915','Zutendaal','dictum sapien.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('77137','3041 Quisque Rd.','1352','Mont-Saint-Andr','Proin non massa non ante');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('77137','3041 Quisque Rd.','1352','Mont-Saint-Andr?','Proin non massa non ante');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('88696','4420 Magna. Street','497','Tongeren','ornare tortor at risus.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('A1O 3N7','Ap #565-9829 Nibh. Ave','857','Waret-lEvque','arcu.');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('A1O 3N7','Ap #565-9829 Nibh. Ave','857','Waret-lEv?que','arcu.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('62196','2567 Ante Road','187','Kettering','lectus, a sollicitudin orci sem');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('23295','7224 Ipsum St.','491','Alexandria','Nulla dignissim. Maecenas ornare');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('V4O 9J5','Ap #725-3332 Rutrum Rd.','639','Port Alice','Etiam');
@@ -297,7 +297,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L2G 2F9','P.
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('57177','P.O. Box 350, 2403 Posuere Road','1246','Macon','varius orci, in');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('B9C 8V4','666-3177 Euismod Avenue','432','Anlier','sagittis. Duis gravida. Praesent');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('00851','P.O. Box 565, 2643 Metus Rd.','578','Monceau-Imbrechies','rutrum');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('P7M 9U9','P.O. Box 642, 3266 Ridiculus Avenue','1274','Flnu','amet metus. Aliquam erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('P7M 9U9','P.O. Box 642, 3266 Ridiculus Avenue','1274','Fl?nu','amet metus. Aliquam erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('A5O 3G8','P.O. Box 832, 4782 Mollis Ave','1450','Hulshout','non enim commodo hendrerit. Donec porttitor');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('41670','816-6747 Nam Avenue','923','Warren','Donec');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('X8P 1Y7','9959 Mauris Street','406','Massenhoven','faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis');
@@ -309,12 +309,12 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('T5C 5B4','21
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('46300','407 Sodales Avenue','1329','Aklavik','neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('09367','P.O. Box 515, 6137 Dolor St.','674','Whitby','pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('85450','113-6672 Quis, Ave','1036','Roxburgh','in sodales elit erat vitae risus. Duis a mi fringilla');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('C6V 7L6','6292 Neque. St.','871','Hannche','Donec luctus');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('C6V 7L6','6292 Neque. St.','871','Hann?che','Donec luctus');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('20062','P.O. Box 258, 7666 Sit St.','714','Tourinne','mauris sit amet lorem semper auctor. Mauris vel turpis.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('F2J 6T6','876-9016 Donec Street','1245','King Township','Donec porttitor tellus non magna. Nam ligula elit, pretium');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('05984','P.O. Box 576, 2081 Pede. Road','482','Beerst','semper erat, in consectetuer ipsum nunc id enim. Curabitur massa.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('X4H 8A4','Ap #424-1100 Neque Street','1051','Toowoomba','nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('82438','P.O. Box 555, 9758 Etiam Rd.','1238','Hvillers','vulputate, lacus. Cras interdum. Nunc sollicitudin');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('82438','P.O. Box 555, 9758 Etiam Rd.','1238','H?villers','vulputate, lacus. Cras interdum. Nunc sollicitudin');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('X5C 9F9','P.O. Box 162, 3856 Magnis Avenue','1321','Soye','urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('P5E 7G4','206-1093 Luctus Street','1091','Montrose','sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('17667','749-4594 Ut Road','713','Xhoris','ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean');
@@ -327,7 +327,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('76142','8187
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('B3O 1O4','Ap #479-8755 Luctus Av.','1378','Wangaratta','magna. Lorem');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('C7I 9Q3','4590 Rutrum Avenue','1339','Lourdes','nonummy. Fusce fermentum');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('R7J 3P1','938-259 Eu Street','1359','Greenlaw','In mi pede, nonummy ut, molestie');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('41261','583-7762 Nulla Road','473','Dgelis','sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('41261','583-7762 Nulla Road','473','D?gelis','sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('42333','2378 Gravida Ave','751','Bloomington','Nullam vitae diam. Proin dolor.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('77118','6891 Non St.','431','Maidenhead','dignissim pharetra. Nam ac nulla. In tincidunt');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('X3T 6L5','259-9370 A, Ave','1493','New Orleans','Mauris vel turpis. Aliquam adipiscing lobortis');
@@ -342,7 +342,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('07586','481-
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('C9W 4B0','P.O. Box 840, 3732 Consequat Rd.','869','Denderbelle','vitae, orci. Phasellus dapibus quam quis diam. Pellentesque habitant');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('40406','P.O. Box 397, 3185 Quisque Rd.','493','Lot','Vivamus non lorem vitae odio sagittis semper. Nam tempor diam');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('I1A 6E7','P.O. Box 777, 7608 Fusce Avenue','98','Dampicourt','odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L6D 3R5','Ap #498-9104 Justo. Av.','92','Saint-Lger','quam vel sapien imperdiet ornare. In');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L6D 3R5','Ap #498-9104 Justo. Av.','92','Saint-L?ger','quam vel sapien imperdiet ornare. In');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('A3B 9B8','600-5310 Inceptos Road','115','Montigny-le-Tilleul','orci,');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('M3M 5W3','262-8208 Tempus Street','256','Zelem','non, egestas a, dui.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('17707','Ap #813-6636 Tincidunt Av.','754','Moerzeke','tempor, est ac mattis semper, dui lectus rutrum urna,');
@@ -375,7 +375,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('20042','112-
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('G8R 1X8','934-753 Consequat Road','1485','Meeswijk','justo. Praesent');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('97464','951-1555 Eget Av.','199','Kings Lynn','Nam tempor diam dictum sapien.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('80541','Ap #635-1042 Vitae Ave','764','Gravelbourg','a, scelerisque sed, sapien. Nunc pulvinar arcu et');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('N4K 8B7','4412 Ridiculus Street','694','Limerl','blandit at, nisi.');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('N4K 8B7','4412 Ridiculus Street','694','Limerl?','blandit at, nisi.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('36204','P.O. Box 490, 2299 Est Road','1351','Murdochville','elit pede,');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('82850','P.O. Box 330, 9239 Urna. Rd.','1038','Meeswijk','rutrum eu, ultrices sit amet, risus. Donec nibh');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('21241','P.O. Box 660, 7152 Iaculis Av.','1432','Pointe-au-Pic','eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit');
@@ -426,7 +426,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('12756','825-
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('X7O 4B2','403-4919 Eget St.','1120','Linlithgow','Aliquam ultrices iaculis odio.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('D2D 3B8','402-887 Eros Av.','507','Erie','Aliquam ornare, libero at auctor ullamcorper, nisl');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('Q4A 7L4','963-4709 Auctor. St.','819','Newton Stewart','Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('D3S 5N9','927-1431 Lacinia. St.','51','Saint-Gry','bibendum fermentum');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('D3S 5N9','927-1431 Lacinia. St.','51','Saint-G?ry','bibendum fermentum');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('91993','3763 Sed Street','1430','Sint-Kruis-Winkel','iaculis enim, sit amet ornare lectus justo eu arcu. Morbi');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('W8E 5W0','P.O. Box 751, 6307 Quis, St.','69','Rotterdam','orci luctus et ultrices posuere cubilia Curae; Donec');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('K6W 9O3','427-4956 Sagittis Rd.','1202','Devon','sed');
@@ -438,7 +438,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('J4P 2O8','22
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('D9P 4L2','555-6975 Tristique Street','1119','Columbus','nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('O9U 1N5','P.O. Box 667, 9413 Neque Rd.','55','Belgrade','lorem ac');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('64408','P.O. Box 438, 813 Ut, St.','343','Fredericton','pharetra. Quisque ac libero nec ligula');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('14195','Ap #867-5182 Nec Avenue','1485','Lige','tincidunt pede ac urna.');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('14195','Ap #867-5182 Nec Avenue','1485','Li?ge','tincidunt pede ac urna.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('96083','P.O. Box 300, 3712 Erat St.','564','Steendorp','Nunc mauris sapien, cursus in, hendrerit');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('03368','7771 Molestie Ave','357','Gatineau','at, nisi. Cum');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('F1P 7V1','Ap #220-4627 Eget Road','1397','Keith','nunc interdum feugiat. Sed nec metus facilisis lorem tristique');
@@ -453,7 +453,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('A3F 8V9','Ap
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('67994','7521 Et Avenue','1391','Roxboro','ipsum non arcu.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('23066','9592 Enim. Avenue','540','Esneux','dui. Fusce diam nunc, ullamcorper');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('Z9J 3P4','774-3364 Sed St.','864','Dalkeith','In nec orci. Donec nibh. Quisque nonummy ipsum non arcu.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('16657','P.O. Box 152, 9134 Orci St.','599','Côte-Saint-Luc','in, hendrerit consectetuer, cursus et, magna. Praesent interdum');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('16657','P.O. Box 152, 9134 Orci St.','599','C�te-Saint-Luc','in, hendrerit consectetuer, cursus et, magna. Praesent interdum');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('84685','Ap #912-2512 Vitae Rd.','1015','Moorsele','in magna. Phasellus dolor elit,');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('Q9Q 4R4','746 Magna Ave','589','Fremantle','pharetra. Nam ac nulla.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('69129','P.O. Box 699, 9006 Lorem Street','770','Ellesmere Port','dui. Suspendisse ac metus vitae');
@@ -471,7 +471,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('24042','Ap #
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('78222','301-6652 Vehicula St.','384','Zaanstad','ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('X3A 3U8','453-4225 Dis St.','57','Murdochville','luctus et ultrices posuere cubilia');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('J2H 2X7','6425 At, Ave','315','Stirling','metus. Aliquam erat volutpat.');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('48552','2795 Lorem St.','321','Hlcine','dictum ultricies ligula. Nullam');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('48552','2795 Lorem St.','321','H?l?cine','dictum ultricies ligula. Nullam');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('S6A 9O0','P.O. Box 275, 6001 Turpis St.','823','Laarne','arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus.');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('73422','Ap #451-9769 Dictum Street','228','Saint-Remy-Geest','orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('L5U 1F9','7037 Lorem, Ave','78','Limelette','imperdiet non, vestibulum nec, euismod in, dolor. Fusce feugiat.');
@@ -479,7 +479,7 @@ INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('34253','P.O.
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('R4Q 8X2','144-5638 Est Av.','205','Chantemelle','ac arcu. Nunc mauris. Morbi');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('41014','Ap #346-8196 Dapibus Rd.','993','Louisville','molestie sodales. Mauris blandit enim consequat purus. Maecenas libero est,');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('D2V 5S9','Ap #757-6281 Morbi St.','1056','Dworp','at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit');
-INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('O1S 9Q2','Ap #246-5041 Non St.','732','Grivegne','tempor arcu. Vestibulum ut eros non');
+INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('O1S 9Q2','Ap #246-5041 Non St.','732','Grivegn?e','tempor arcu. Vestibulum ut eros non');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('G4R 3E8','644-4805 Aliquam Street','653','Jette','nisi sem semper erat, in consectetuer ipsum');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('43407','7759 Velit St.','232','Meise','et, lacinia');
 INSERT INTO Adresa (psc,ulice,cisloPopisne,mesto,poznamka) VALUES ('I1N 4Q7','326-2089 Vehicula Rd.','755','Morinville','est. Nunc');

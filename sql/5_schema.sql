@@ -5,8 +5,8 @@ drop table pripominky;
 
 ALTER TABLE skupina DROP CONSTRAINT fk_idVedouciho;
 
-alter table udalosti drop constraint fk_idVlastnikaSK;
-alter table udalosti drop constraint fk_idVlastnikaUz;
+alter table udalost drop constraint fk_idSkupinyUD;
+alter table udalost drop constraint fk_idVlastnikaUD;
 
 drop table skupina;
 drop table uzivatele;
@@ -20,12 +20,13 @@ drop table adresa;
 --drop table adresa
 create table Adresa (
   idAdresy number(4) CONSTRAINT nn_idAdresyA NOT NULL CONSTRAINT pk_idAdresyA PRIMARY KEY,
-  psc number(5),
+  psc varchar(30),
   ulice varchar2(40),
   cisloPopisne number(4),
   mesto varchar2(40),
-  poznamka varchar2(30)
+  poznamka varchar2(255)
 );
+
 
 --autoincrement Adresa.idAdresy
 CREATE SEQUENCE seq_adresa
@@ -40,14 +41,14 @@ FOR EACH ROW
 begin
   select seq_adresa.nextval into :new.idAdresy from dual;
 end;
---------------------------------------------E
+-------------------------------------------E
 
 -------------------------------------------S
 
 --drop table UZIVATEL;
 create table uzivatel (
   idUzivatele number(10) CONSTRAINT pk_idUzivatele primary key CONSTRAINT nn_idUzivatele not null,
-  email varchar2(40) CONSTRAINT nn_email NOT NULL,
+  email varchar2(60) CONSTRAINT nn_email NOT NULL,
   jmeno varchar2(30),
   prijmeni varchar2(30),
   heslo varchar2(30) CONSTRAINT nn_heslo  NOT NULL,
@@ -59,12 +60,6 @@ create table uzivatel (
   idAdresy number(4),
   CONSTRAINT fk_idAdresy FOREIGN KEY (idAdresy) REFERENCES Adresa(idAdresy)
 );
-
-
---zmena typu/delky sloupce
-alter table uzivatele modify (
-  email varchar2(40) 
-  );
 
 
 --test insert uzivatele
@@ -124,19 +119,23 @@ end;
 CREATE TABLE  UDALOST (
   idUdalosti number(4) CONSTRAINT nn_idUdalosti NOT NULL CONSTRAINT pk_idUdalosti PRIMARY KEY,
   nazev varchar2(30),
-  idVlastnikaSk number(4) ,
-  idVlastnikaUz number(4) ,
+  idVlastnika number(4) ,
+  idSkupiny number(4) ,
   zacatek date,
   konec date,
   verejna number(1),
   idMistaKonani number(10),
   
   popis varchar2(255),
-  CONSTRAINT fk_idVlastnikaSK foreign key (idVlastnikaSk) REFERENCES skupina(idSkupiny),
-  CONSTRAINT fk_idVlastnikaUz foreign key (idVlastnikaUz) REFERENCES uzivatel(idUzivatele),
-  CONSTRAINT fk_idMistaKonani foreign key (idMistaKonani) REFERENCES Adresa(idAdresy)
+
+  CONSTRAINT fk_idVlastnikaUD foreign key (idVlastnika) REFERENCES uzivatel(idUzivatele);
+  CONSTRAINT fk_idSkupinyUD foreign key (idSkupiny) REFERENCES skupina(idSkupiny);
+  CONSTRAINT fk_idMistaKonaniUD foreign key udalost(idMistaKonani) REFERENCES Adresa(idAdresy)
+
 );
 
+alter table udalost add CONSTRAINT fk_idVlastnikaUD foreign key (idVlastnika) REFERENCES uzivatel(idUzivatele);
+alter table udalost add CONSTRAINT fk_idSkupinyUD foreign key (idSkupiny) REFERENCES skupina(idSkupiny);
 
 --autoincrement udalost.idUdalosti
 CREATE SEQUENCE seq_udalost
