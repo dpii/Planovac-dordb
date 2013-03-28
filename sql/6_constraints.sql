@@ -5,7 +5,7 @@ add constraint cas_check check (zacatek < konec);
 
 --2.1.2 
 
-alter table Skupina modify idVedouciho not null;
+alter table Skupina idVedouciho not null;
 
 --2.1.3
 
@@ -17,43 +17,48 @@ alter table Uzivatel user_pass_check check length(password) > 5;
 
 --2.2.1 
 
-CREATE OR REPLACE PROCEDURE kontrola_pripominky (id_pripominky in number,  cas_pred_udalosti in date, zacatek in date) AS
-cas_pripominky in date;
-zacatek_udalosti in date;
+CREATE OR REPLACE PROCEDURE kontrola_cas_pripominka  (id in number) AS
+zacatek in date;
+prip in date;
 BEGIN
- SELECT p.cas_pred_udalosti INTO cas_pripominky FROM pripominky WHERE p.id_pripominky = id_pripominky;
- SELECT u.zacatek INTO zacatek_udalosti FROM udalosti WHERE 
+	
+ SELECT u.zacatek INTO zac FROM udalost u WHERE u.id_pripominky = id;
+ SELECT uz.casUpominky INTO prip FROM udalosti_uzivatele uz WHERE uz.idUdalosti = id;
+ 
 
- IF (cas_pripominky > zacatek_udalosti) then
-  raise_application_error(-20000, 'Nelze přidat připomínku v čase po zahájení události!');
+ IF (prip > zac) then
+  raise_application_error(-20000, 'Připomínka musí začít před začátkem události!');
  END IF;
 END;
 
 
-CREATE OR REPLACE TRIGGER trig_kontrola_pripominky
+CREATE OR REPLACE TRIGGER kontrola_cas_pripominka
 BEFORE insert or update 
-ON Pripominky
+ON udalosti_uzivatelu
 FOR EACH ROW
   BEGIN
-    kontrola_pripominky(:new.id_pripominky,:new.cas_pred_udalosti,:new.zacatek);
+    kontrola_cas_pripominka(:new.idUdalosti);
   END;
   
 --2.2.2 
 
-CREATE OR REPLACE PROCEDURE kontrola_skupiny (id_skupiny in number) AS
-pocet_clenu in number;
+CREATE OR REPLACE PROCEDURE kontrola_skupiny  (id in number) AS
+pocet in number;
 BEGIN
- SELECT DISTINCT count(*) INTO pocet_clenu FROM UzivatelSkupiny u WHERE u.idSkupiny = id_skupiny ;
+	
+	
+	SELECT count(*) INTO pocet FROM skupiny_uzivatelu WHERE idSkupiny = id GROUP BY idSkupiny; 
 
- IF (pocet_clenu > 150) then
-  raise_application_error(-20000, 'Skupina je omezena pro maximální počet 150 členů!');
+ IF (pocet > 150) then
+  raise_application_error(-20000, 'Skupina nemůže mít více jak 150 členů!');
  END IF;
 END;
 
-CREATE OR REPLACE TRIGGER trig_kontrola_skupiny
+
+CREATE OR REPLACE TRIGGER kontrola_skupiny
 BEFORE insert or update 
-ON Skupiny
+ON skupiny_uzivatelu
 FOR EACH ROW
   BEGIN
-    kontrola_pripominky(:new.idSkupiny);
+    kontrola_skupiny(:new.idSkupiny);
   END;
