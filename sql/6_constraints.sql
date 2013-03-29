@@ -5,15 +5,17 @@ add constraint cas_check check (zacatek < konec);
 
 --2.1.2 
 
-alter table Skupina idVedouciho not null;
+ALTER TABLE Skupina
+MODIFY (idVedouciho NUMBER(8,2) CONSTRAINT nn_IdVedoucihoS NOT NULL); 
 
 --2.1.3
 
-alter table Skupina group_pass_check check length(password) > 5;
+alter table Skupina 
+add constraint skupina_heslo_kontrola check (length(heslopropridani) > 2);
 
 --2.1.4
 
-alter table Uzivatel user_pass_check check length(password) > 5;
+alter table Uzivatel add constraint  uzivatel_heslo_kontrola check (length(heslo) > 4);
 
 --2.2.1 
 
