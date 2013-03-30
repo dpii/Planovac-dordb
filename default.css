@@ -4,12 +4,29 @@
 #main {
 	
 	padding: 20px;
-	margin-left: 5%;
+	margin-left: 50px;
 	text-align: left;
+	
+	background: #F4D6BC;
 	
 	border-style: dashed;
 	border-width: 1px;
 	
 
 
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+
+color: #153450;
+background: #F8E4CC;
+}
+
+body {
+	
+	background: #8FBCDB;
+	
+	
 }

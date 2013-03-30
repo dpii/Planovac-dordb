@@ -8,9 +8,7 @@
 <body>
 <h3>DORDB 2013 - Nachazel, Dupal - Planovac</h3>
 <div id="main">
-
-
-<h1>1. Obrázek s modelem (E-R diagram)</h1>
+<h2>1. Obrázek s modelem (E-R diagram)</h2>
 <p>
  musí obsahovat minimálně 4 entity, lze použít model z vlastních předchozích 
 semestrálních prací apod. Doporučena jsou originální zadání (nikoliv různé knihovny, 
@@ -21,8 +19,8 @@ databáze CD/DVD, autobazary, apod.)
 </p>
 <img src="images/er.jpg" alt="ER Diagram">
 
-<h1>2. Slovní popis dodatečných integritních omezení</h1>
-<h2>2.1 Triviální omezení</h2>
+<h2>2. Slovní popis dodatečných integritních omezení</h2>
+<h3>2.1 Triviální omezení</h3>
 <ul>
 <li> Konec události musí být později než její začátek</li>
 <li> Skupina musí mít ID vedoucího</li>
@@ -30,7 +28,7 @@ databáze CD/DVD, autobazary, apod.)
 <li> Uživatelské heslo musí mít alespoň 5 znaků </li>
 </ul>
 
-<h2>2.2 Netriviální omezení</h2>
+<h3>2.2 Netriviální omezení</h3>
 <ul>
 <li> Pripominka/Udalost - cas_pred_udalosti nemůže být později než je začátek události</li>
 <li> Skupina nebude mít více jak 150 členů </li>
@@ -38,7 +36,7 @@ databáze CD/DVD, autobazary, apod.)
 
 <p></p>
 
-<h1>3. Návrh API rozhraní „business logiky“ pro dva procesy</h1>
+<h2>3. Návrh API rozhraní „business logiky“ pro dva procesy</h2>
 <p>
 <b>Procedura:</b> nastavUpozorneniUdalostiProSkupinu <br />
 <b>Parametry:</b> idUdalosti, cas_pred_udalosti, opakovani_po_intervalu <br />
@@ -51,7 +49,7 @@ databáze CD/DVD, autobazary, apod.)
 <b>Popis:</b> Vyhleda udalosti, které se nacházejí v požadovaném intervalu. Např. vedoucí skupiny hledá vhodný termin. <br />
 </p>
 
-<h1>4. Návrh pěti slovně formulovaných dotazů nad schématem</h1>
+<h2>4. Návrh pěti slovně formulovaných dotazů nad schématem</h2>
 <p>
 <ol>
 <li>Určí počet uživatelů, kteří mají v daný čas již vytvořenou událost v rámci skupiny</li>
@@ -66,10 +64,10 @@ databáze CD/DVD, autobazary, apod.)
 
 </p>
 
-<h1>5. Skript, který vytvoří databázové schéma odpovídající E-R diagramu</h1>
+<h2>5. Skript, který vytvoří databázové schéma odpovídající E-R diagramu</h2>
 <a href="sql/5_schema.sql">5_schema.sql</a>
 
-<h1>6. Skript, který vytvoří v databázovém schématu dodatečná integritní omezení</h1>
+<h2>6. Skript, který vytvoří v databázovém schématu dodatečná integritní omezení</h2>
 <a href="sql/6_constraints.sql">6_constraints.sql</a>
 <p>
 
@@ -77,7 +75,7 @@ databáze CD/DVD, autobazary, apod.)
 
 </p>
 
-<h1>7. Skript, který naplní tabulky testovacími daty</h1>
+<h2>7. Skript, který naplní tabulky testovacími daty</h2>
 <p>
 <a href="sql/7_data_uzivatel.sql">7_data_uzivatel.sql</a><br />
 <a href="sql/7_data_skupina.sql">7_data_skupina.sql</a><br />
@@ -88,15 +86,15 @@ databáze CD/DVD, autobazary, apod.)
 
 </p>
 
-<h1>8. Skript (včetně výstupu spool), který provede postupně všechny navržené dotazy (viz výše)</h1>
+<h2>8. Skript (včetně výstupu spool), který provede postupně všechny navržené dotazy (viz výše)</h2>
 <p>
 <a href="sql/8_queries.sql">8_queries.sql</a>
 
 
 </p>
 
-<h1>9. Skript, který se pokusí porušit postupně všechna dodatečná integritní omezení + výstup spool 
-z provádění tohoto skriptu (budou vidět chyby při porušení I.O.)</h1>
+<h2>9. Skript, který se pokusí porušit postupně všechna dodatečná integritní omezení + výstup spool 
+z provádění tohoto skriptu (budou vidět chyby při porušení I.O.)</h2>
 <p>
 
 <a href="sql/9_constraints_check.sql">9_constraints_check.sql</a>
@@ -104,7 +102,7 @@ z provádění tohoto skriptu (budou vidět chyby při porušení I.O.)</h1>
 </p>
 
 
-<h1>10. Skript pro vytvoření balíku (package) a procedur „business logiky“ (viz výše)</h1>
+<h2>10. Skript pro vytvoření balíku (package) a procedur „business logiky“ (viz výše)</h2>
 <p>
 
 <a href="sql/10_package.sql">10_package.sql</a><br />
@@ -112,8 +110,8 @@ z provádění tohoto skriptu (budou vidět chyby při porušení I.O.)</h1>
 
 </p>
 
-<h1>11. Testovací skript (včetně výstupu spool obdrženého po spuštění) pro obě procedury, včetně 
-souvisejících dotazů, které ověří, že každá procedura provedla to co měla</h1>
+<h2>11. Testovací skript (včetně výstupu spool obdrženého po spuštění) pro obě procedury, včetně 
+souvisejících dotazů, které ověří, že každá procedura provedla to co měla</h2>
 <p>
 
 <a href="sql/11_bl_test.sql">11_bl_test.sq</a><br />
@@ -121,9 +119,9 @@ souvisejících dotazů, které ověří, že každá procedura provedla to co m
 </p>
 
 
-<h1>12. Skript, který doplní do zvolené tabulky schématu sloupec, který bude obsahovat odvozené 
+<h2>12. Skript, který doplní do zvolené tabulky schématu sloupec, který bude obsahovat odvozené 
 hodnoty (průměrný plat zaměstnance v rámci oddělní apod.) – tyto hodnoty budou 
-automaticky aktualizovány pomocí triggerů</h1>
+automaticky aktualizovány pomocí triggerů</h2>
 <p>
 
 <a href="sql/12_deriv_column.sql">12_deriv_column.sql</a><br />
@@ -131,7 +129,7 @@ automaticky aktualizovány pomocí triggerů</h1>
 
 </p>
 
-<h1>13. Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě</h1>
+<h2>13. Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě</h2>
 <a href="sql/13_object_schema.sql">13_object_schema.sql</a><br />
 <p>
 
@@ -139,7 +137,7 @@ automaticky aktualizovány pomocí triggerů</h1>
 
 </p>
 
-<h1>14. Skript, který provede navržených pět dotazů znovu, tentokrát nad objektovými tabulkami</h1>
+<h2>14. Skript, který provede navržených pět dotazů znovu, tentokrát nad objektovými tabulkami</h2>
 <p>
 
 <a href="sql/14_object_queries.sql">13_object_queries.sql</a><br />
@@ -147,7 +145,7 @@ automaticky aktualizovány pomocí triggerů</h1>
 
 </p>
 
-<h1>15. Navrhněte slovně fakta a dimenze pro datový sklad vycházející z vaší databáze. </h1>
+<h2>15. Navrhněte slovně fakta a dimenze pro datový sklad vycházející z vaší databáze. </h2>
 <p>
 
 
