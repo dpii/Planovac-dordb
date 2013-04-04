@@ -1,3 +1,9 @@
+create table mesto
+(
+	psc number(5) CONSTRAINT nn_pscA NOT NULL CONSTRAINT pk_pscA PRIMARY KEY,
+	nazevMesta varchar2(30)
+);
+
 create table adresa
 (
 
@@ -6,8 +12,9 @@ create table adresa
   ulice varchar2(40),
   cisloPopisne number(4),
   mesto varchar2(40),
-  poznamka varchar2(255)
+  poznamka varchar2(255),
 
+  CONSTRAINT fk_pscUD foreign key (psc) REFERENCES mesto(psc)
  );
 
 
