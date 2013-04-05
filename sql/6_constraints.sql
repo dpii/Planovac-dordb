@@ -42,7 +42,7 @@ FOR EACH ROW
     kontrola_cas_pripominka(:new.idUdalosti);
   END;
   
---2.2.2 
+--2.2.2
 
 CREATE OR REPLACE PROCEDURE kontrola_skupiny  (id in number) AS
 pocet in number;
