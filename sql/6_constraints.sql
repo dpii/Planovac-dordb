@@ -44,21 +44,21 @@ FOR EACH ROW
   
 --2.2.2
 
-CREATE OR REPLACE PROCEDURE kontrola_skupiny  (id in number) AS
-pocet in number;
+create or replace 
+PROCEDURE kontrola_skupiny(ide in number) AS
+pocet number;
 BEGIN
-	
-	
-	SELECT count(*) INTO pocet FROM skupiny_uzivatelu WHERE idSkupiny = id GROUP BY idSkupiny; 
+		
+	SELECT count(*) INTO pocet FROM skupiny_uzivatelu WHERE idSkupiny = ide GROUP BY idSkupiny; 
 
  IF (pocet > 150) then
-  raise_application_error(-20000, 'Skupina nemůže mít více jak 150 členů!');
+  raise_application_error(-20000, 'Skupina nemůže mít více uživatelů než 150!');
  END IF;
 END;
 
-
-CREATE OR REPLACE TRIGGER kontrola_skupiny
-BEFORE insert or update 
+create or replace 
+trigger kontrola_skupiny
+after insert
 ON skupiny_uzivatelu
 FOR EACH ROW
   BEGIN
