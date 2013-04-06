@@ -179,5 +179,43 @@ The statistic feature requires that the user is granted select on v_$sesstat, v_
 
 -- 2.2
 
+declare 
+ide number;
+
+begin
+
+   for i in 101..200 loop
+ide:=i+625;
+insert into DUPALPE1.SKUPINY_UZIVATELU (IDSKUPINY,IDUZIVATELE) values ('355',ide);
+
+  end loop;
+end;
 
 -- vypis
+
+
+Error starting at line 22 in command:
+declare 
+ide number;
+
+begin
+
+   for i in 101..200 loop
+ide:=i+625;
+insert into DUPALPE1.SKUPINY_UZIVATELU (IDSKUPINY,IDUZIVATELE) values ('355',ide);
+
+  end loop;
+end;
+Error report:
+ORA-20000: Skupina nemůže mít více jak 150 členů!
+ORA-06512: na "DUPALPE1.KONTROLA_SKUPINY", line 9
+ORA-06512: na "DUPALPE1.KONTROLA_SKUPINY", line 2
+ORA-04088: chyba během provádění triggeru 'DUPALPE1.KONTROLA_SKUPINY'
+ORA-06512: na line 8
+20000. 00000 -  "%s"
+*Cause:    The stored procedure 'raise_application_error'
+           was called which causes this error to be generated.
+*Action:   Correct the problem as described in the error message or contact
+           the application administrator or DBA for more information.
+Unable to gather statistics please unsure user has correct access.
+The statistic feature requires that the user is granted select on v_$sesstat, v_$statname and v_$session.
