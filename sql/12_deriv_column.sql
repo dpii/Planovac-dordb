@@ -1,19 +1,50 @@
--- Pro každého uživatele ukáže, kolik času zbývá do nejblížší události
+-- Po pridani uzivatele do skupiny, nastavni hodnotu ve Skupina - pocet_clenu
 
-create or replace procedure vypocti_dobu(ide in number, zacat in date) as
+-- pridani sloupce pro odvozenou hodnotu
+
+alter table skupina add
+(
+
+pocet_clenu number
+
+);
+
+
+--  trigger, heavy stuff!
+
+create or replace 
+trigger sectiSkupinu
+after insert or delete 
+ON skupiny_uzivatelu
+declare
+temp number;
+  BEGIN
+   
+update skupina set pocet_clenu = sectiCleny(idSkupiny);
+
+  END;
+  
+ -- funkce
+  
+create or replace 
+function sectiCleny(id_skupiny number) 
+return number
+
+is
+
 pocet number;
 begin
 
-pocet := zacat - to_date(sysdate, 'DD.MM.YYYY HH24:MI:SS');
- 
-update udalosti_uzivatelu set od_vlozeni_zacne_za = pocet where idUdalosti = ide;
- 
-end;
+select count(*) into pocet  from skupiny_uzivatelu where idSkupiny = id_skupiny;
 
-create or replace trigger vypocet_doby
-after insert or update
-ON udalost
-for each row  
-BEGIN
-  vypocti_dobu(:new.idUdalosti,:new.zacatek);
-END;
+return pocet;
+
+end;      
+  
+
+
+ --     test qrs
+  
+  --insert into skupiny_uzivatelu (idSkupiny, idUzivatele) Values(2, 632);
+  --select * from skupiny_uzivatelu where idSkupiny = 2;
+  --select * from skupina where idSkupiny = 2;
