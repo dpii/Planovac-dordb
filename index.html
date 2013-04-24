@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
@@ -6,7 +6,7 @@
 <title>DODRB 2013 - Planovac - Nachazel, Dupal</title>
 </head>
 <body>
-<h3>DORDB 2013 - Nachazel, Dupal - Planovac</h3>
+<h3>DORDB 2013 - Nacházel, Ďupal - Plánovač</h3>
 <div id="main">
 <h2>1. Obrázek s modelem (E-R diagram)</h2>
 <p>
@@ -113,7 +113,7 @@ z provádění tohoto skriptu (budou vidět chyby při porušení I.O.)</h2>
 souvisejících dotazů, které ověří, že každá procedura provedla to co měla</h2>
 <p>
 
-<a href="sql/11_bl_test.sql">11_bl_test.sq</a><br />
+<a href="sql/11_bus_logic_test.sql">11_bus_logic_test.sql</a><br />
 
 </p>
 
@@ -149,9 +149,33 @@ automaticky aktualizovány pomocí triggerů</h2>
 
 
 
+Tabulky dimenzí:
+<ul>
+<li>Misto - např. v jakém městě, kraji nebo zemi bývá nejvyšší účast</li>
+<li>Uzivatel - pro zjištění např. čí události jsou nejpopulárnější</li>
+<li>Cas - rozdělení podle času (dny, týdny, měsíce, ...)</li>
+<li>Udalost - kvůli faktu, že v jeden čas může být na jednom místě více událostí, navíc umožní filtrovat např. na základě názvu konkrétní každoroční události a sledovat jak se každý rok mění účast </li>
+
+</ul>
+
+Tabulka faktů: Ucast
+<ul>
+<li>idAdresy (FK na dimenzi Misto)</li>
+<li>idVlastnika (FK na dimenzi Uzivatel)</li>
+<li>zacatekUdalosti (FK na dimenzi Cas)</li><li>idUdalosti (FK na dimenzi Udalost)</li>
+<li>ucast (NUMBER)</li>
+
+
+
+</ul>
+
+<p>
+
+
+
+Míra: Počet zúčastněných osob
+
 </p>
-
-
 
 
 
