@@ -13,6 +13,15 @@ drop table uzivatele;
 drop table udalost;
 drop table adresa;
 
+drop sequence "SEQ_ADRESA";
+drop sequence "SEQ_SKUPINA";
+drop sequence "SEQ_UDALOST";
+drop sequence "SEQ_UZIVATEL";
+drop trigger ADRESA;
+drop trigger SKUPINA;
+drop trigger UDALOST;
+drop trigger UZIVATEL;
+
 -- !! triggery a sekvence - zustanou
 
 --test insert uzivatele
