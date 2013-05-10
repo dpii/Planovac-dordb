@@ -1,14 +1,13 @@
-create table mesto
+create table Mesto
 (
 	psc number(5) CONSTRAINT nn_pscA NOT NULL CONSTRAINT pk_pscA PRIMARY KEY,
 	nazevMesta varchar2(30)
 );
 
-create table adresa
+create table Adresa
 (
-
   idAdresy number(4) CONSTRAINT nn_idAdresyA NOT NULL CONSTRAINT pk_idAdresyA PRIMARY KEY,
-  psc varchar(30),
+  psc number(5),
   ulice varchar2(40),
   cisloPopisne number(4),
   mesto varchar2(40),
@@ -17,18 +16,30 @@ create table adresa
   CONSTRAINT fk_pscUD foreign key (psc) REFERENCES mesto(psc)
  );
 
-
 CREATE SEQUENCE seq_adresa
 INCREMENT BY 1
 START WITH 1
 NOMAXVALUE
 MINVALUE 0;
  
-CREATE TRIGGER adresa
+create or replace 
+trigger adresa
 BEFORE INSERT ON adresa
-FOR EACH ROW
+for each row
+declare
+    max_id number;
+    cur_seq number;
 begin
-  select seq_adresa.nextval into :new.idAdresy from dual;
+    if :new.idAdresy is null then
+        select SEQ_ADRESA.nextval into :new.idAdresy from dual;
+    else
+        select greatest(nvl(max(idAdresy),0), :new.idAdresy) into max_id from adresa;
+        select SEQ_ADRESA.nextval into cur_seq from dual;
+        while cur_seq < max_id
+        loop
+            select SEQ_ADRESA.nextval into cur_seq from dual;
+        end loop;
+    end if;
 end;
 
 
@@ -58,11 +69,24 @@ START WITH 1
 NOMAXVALUE
 MINVALUE 0;
  
-CREATE TRIGGER uzivatel
+create or replace 
+trigger uzivatel
 BEFORE INSERT ON uzivatel
-FOR EACH ROW
+for each row
+declare
+    max_id number;
+    cur_seq number;
 begin
-  select seq_uzivatel.nextval into :new.idUzivatele from dual;
+    if :new.idUzivatele is null then
+        select SEQ_UZIVATEL.nextval into :new.idUzivatele from dual;
+    else
+        select greatest(nvl(max(idUzivatele),0), :new.idUzivatele) into max_id from Uzivatel;
+        select SEQ_UZIVATEL.nextval into cur_seq from dual;
+        while cur_seq < max_id
+        loop
+            select SEQ_UZIVATEL.nextval into cur_seq from dual;
+        end loop;
+    end if;
 end;
 
 ---------------------------
@@ -88,11 +112,24 @@ START WITH 1
 NOMAXVALUE
 MINVALUE 0;
  
-CREATE TRIGGER skupina
-BEFORE INSERT ON Skupina
-FOR EACH ROW
+create or replace 
+trigger skupina
+BEFORE INSERT ON skupina
+for each row
+declare
+    max_id number;
+    cur_seq number;
 begin
-  select seq_skupina.nextval into :new.idSkupiny from dual;
+    if :new.idSkupiny is null then
+        select seq_skupina.nextval into :new.idSkupiny from dual;
+    else
+        select greatest(nvl(max(idSkupiny),0), :new.idSkupiny) into max_id from skupina;
+        select seq_skupina.nextval into cur_seq from dual;
+        while cur_seq < max_id
+        loop
+            select seq_skupina.nextval into cur_seq from dual;
+        end loop;
+    end if;
 end;
 
 ---------------------------
@@ -110,11 +147,9 @@ CREATE TABLE  UDALOST (
   
   popis varchar2(255),
 
-  CONSTRAINT fk_idVlastnikaUD foreign key (idVlastnika) REFERENCES uzivatel(idUzivatele);
-  CONSTRAINT fk_idSkupinyUD foreign key (idSkupiny) REFERENCES skupina(idSkupiny);
-  CONSTRAINT fk_idMistaKonaniUD foreign key udalost(idMistaKonani) REFERENCES Adresa(idAdresy)
-
-);
+  CONSTRAINT fk_idVlastnikaUD foreign key (idVlastnika) REFERENCES uzivatel(idUzivatele),
+  CONSTRAINT fk_idSkupinyUD foreign key (idSkupiny) REFERENCES skupina(idSkupiny),
+  CONSTRAINT fk_idMistaKonaniUD foreign key (idMistaKonani) REFERENCES Adresa(idAdresy));
 
 
 CREATE SEQUENCE seq_udalost
@@ -123,11 +158,24 @@ START WITH 1
 NOMAXVALUE
 MINVALUE 0;
  
-CREATE TRIGGER udalost
-BEFORE INSERT ON udalost
-FOR EACH ROW
+create or replace 
+trigger UDALOST
+BEFORE INSERT ON UDALOST
+for each row
+declare
+    max_id number;
+    cur_seq number;
 begin
-  select seq_udalost.nextval into :new.idUdalosti from dual;
+    if :new.idUdalosti is null then
+        select seq_udalost.nextval into :new.idUdalosti from dual;
+    else
+        select greatest(nvl(max(idUdalosti),0), :new.idUdalosti) into max_id from UDALOST;
+        select seq_udalost.nextval into cur_seq from dual;
+        while cur_seq < max_id
+        loop
+            select seq_udalost.nextval into cur_seq from dual;
+        end loop;
+    end if;
 end;
 
 
