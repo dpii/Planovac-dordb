@@ -1,7 +1,7 @@
 create type type_mesto as object
 (
   psc varchar(30),
-  nazevMesta varchar2(40),
+  nazevMesta varchar2(40)
   
  );
 

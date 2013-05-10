@@ -22,6 +22,13 @@ drop trigger SKUPINA;
 drop trigger UDALOST;
 drop trigger UZIVATEL;
 
+
+DROP TYPE type_adresa FORCE;
+DROP TYPE type_mesto FORCE;
+DROP TYPE type_uzivatel FORCE;
+DROP TYPE type_uzivatele FORCE;
+
+
 -- !! triggery a sekvence - zustanou
 
 --test insert uzivatele
