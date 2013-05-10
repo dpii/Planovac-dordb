@@ -19,11 +19,12 @@ create type type_adresa as object
 (
 
   idAdresy number(4),
+  mesto REF type_mesto,
   ulice varchar2(40),
   cisloPopisne number(4),
   mesto REF type_mesto,
   poznamka varchar2(255)
-
+  
  );
  
  
