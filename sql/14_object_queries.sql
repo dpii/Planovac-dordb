@@ -6,7 +6,7 @@ and su.skupina.idSkupiny = '154';
 
 select avg(count(ud.udalost.idUdalosti)) as Prumery_pocet_pripominek_uziv from obj_udalost_uzivatele ud where ud.aktivni = '1' group by ud.uzivatel;
 
-select ud.udalost.idUdalosti, count(*) as pocet_pripominek from obj_udalost_uzivatele ud where aktivni = '1' group by ud.udalost.idUdalosti order by pocet_pripominek desc;
+select ud.udalost.idUdalosti, count(*) as pocet_pripominek from obj_udalost_uzivatele ud where aktivni = '1' and ud.udalost.idUdalosti = 849 group by ud.udalost.idUdalosti order by pocet_pripominek desc;
 
 SELECT ud.nazev, ud.zacatek, ud.konec, me.nazevmesta FROM obj_udalost_uzivatele uz, obj_udalost ud, obj_adresa ad, obj_mesto me where me.psc = ad.mesto.psc and ud.misto.idadresy = ad.idadresy and uz.udalost.idudalosti = ud.idudalosti and uz.uzivatel.iduzivatele = '674' and rownum < 5 order by ud.zacatek;
 
