@@ -78,9 +78,9 @@ CREATE TABLE obj_skupina OF type_skupina
 -------------------
 
 CREATE TYPE type_skupiny AS TABLE OF type_skupina;
-\
-ALTER TYPE type_uzivatel ADD attribute
-skupiny REF type_skupiny cascade;
+
+--ALTER TYPE type_uzivatel ADD attribute
+--skupiny REF type_skupiny cascade;
 
 
 --------------------
@@ -117,14 +117,22 @@ CREATE type type_udalost_uzivatele as object (
   intervalOpakovani number(4) ,
   aktivni number(1)
  );
- 
- 
-  CREATE TYPE type_udalosti_uzivatelu AS TABLE OF type_udalost_uzivatele;
- 
- 
- CREATE TABLE obj_udalost_uzivatele OF type_udalost_uzivatele
+
+CREATE TABLE obj_udalost_uzivatele OF type_udalost_uzivatele
 (FOREIGN KEY (uzivatel) REFERENCES obj_uzivatel,
 FOREIGN KEY (udalost) REFERENCES obj_udalost);
+
+----------------
+
+CREATE type type_skupina_uzivatele as object (
+
+  skupina REF type_skupina,
+  uzivatel REF type_uzivatel
+ );
+ 
+CREATE TABLE obj_skupina_uzivatele OF type_skupina_uzivatele 
+(FOREIGN KEY (uzivatel) REFERENCES obj_uzivatel,
+FOREIGN KEY (skupina) REFERENCES obj_skupina);
 
  
 --\
