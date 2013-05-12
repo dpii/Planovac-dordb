@@ -1,11 +1,11 @@
 --def package
 create or replace
 package planovac_api as
-procedure nastavUpo(idUda number, casUpominky date, intervalOpakovani number);
+procedure nastavUpo(idUda number, predstih number, opakovani number);
 function zjistiDostupnost (idskup number, zac date, kon date) return number;
 
 end planovac_api;
-
+/
 --logika package
 create or replace
 package body planovac_api as
@@ -13,15 +13,15 @@ casU date;
 casPred date;
 pocet number;
 
-procedure nastavUpo (idUda number, casUpominky date, intervalOpakovani number) IS
+procedure nastavUpo (idUda number, predstih number, opakovani number) IS
 
 BEGIN
 	
-  select casUpominky into casU from udalost where idUdalosti = idUda;
+  select zacatek into casU from udalost where idUdalosti = idUda;
   
-  casPred := casU - 1;
+  casPred := casU - predstih;
   
-  update udalosti_uzivatelu set casUpominky = casPred, intervalOpakovani = 1 where idUdalosti = idUda;
+  update udalosti_uzivatelu set casUpominky = casPred, intervalOpakovani = opakovani where idUdalosti = idUda;
   
 END nastavUpo;
 

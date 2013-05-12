@@ -53,8 +53,68 @@ Predicate Information (identified by operation id):
               
               
 
+-- nastavi upominky k dane udalosti pro vsechny uzivatele (idudalosti, s jakym predstihem, jak casto se bude opakovat)
+
+begin
+planovac_api.nastavUpo (998, 3, 2);
+end;
 
 
+--vypis z tabulky udalosti_uzivatelu nastaveny cas upominky, nastaveny intervalopakovani dle id udalosti 998
+
+Autotrace Enabled
+Shows the execution plan as well as statistics of the statement.
+IDUDALOSTI IDUZIVATELE TYP_PRIPOMINKY CASUPOMINKY INTERVALOPAKOVANI    AKTIVNI
+---------- ----------- -------------- ----------- ----------------- ----------
+       998         724              4 16.04.14                    2          1 
+       998         848              3 16.04.14                    2          1 
+       998         905              4 16.04.14                    2          1 
+       998         939              3 16.04.14                    2          1 
+       998        1089              1 16.04.14                    2          1 
+       998        1095              4 16.04.14                    2          1 
+
+ 6 rows selected 
+
+Plan hash value: 218578627
+ 
+--------------------------------------------------------------------------------------------------
+| Id  | Operation                   | Name               | Rows  | Bytes | Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT            |                    |     2 |    50 |     3   (0)| 00:00:01 |
+|   1 |  TABLE ACCESS BY INDEX ROWID| UDALOSTI_UZIVATELU |     2 |    50 |     3   (0)| 00:00:01 |
+|*  2 |   INDEX RANGE SCAN          | UC_UDALUZIV        |     2 |       |     2   (0)| 00:00:01 |
+--------------------------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("IDUDALOSTI"=998)
+
+              
+Autotrace Enabled
+Shows the execution plan as well as statistics of the statement.
+Unable to gather statistics please unsure user has correct access.
+The statistic feature requires that the user is granted select on v_$sesstat, v_$statname and v_$session.
+IDUDALOSTI NAZEV                          IDVLASTNIKA  IDSKUPINY ZACATEK  KONEC       VEREJNA IDMISTAKONANI POPIS                                                                                                                                                                                                                                                         
+---------- ------------------------------ ----------- ---------- -------- -------- ---------- ------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       998 aliquet                                855        346 19.04.14 19.04.14          1          1293                                                                                                                                                                                                                                                                 
+
+Plan hash value: 3285111761
+ 
+---------------------------------------------------------------------------------------------
+| Id  | Operation                   | Name          | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT            |               |     1 |    42 |     1   (0)| 00:00:01 |
+|   1 |  TABLE ACCESS BY INDEX ROWID| UDALOST       |     1 |    42 |     1   (0)| 00:00:01 |
+|*  2 |   INDEX UNIQUE SCAN         | PK_IDUDALOSTI |     1 |       |     0   (0)| 00:00:01 |
+---------------------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("IDUDALOSTI"=998)
+              
+              
 
 
 
