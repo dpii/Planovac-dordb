@@ -53,7 +53,7 @@ Predicate Information (identified by operation id):
               
               
 
--- nastavi upominky k dane udalosti pro vsechny uzivatele (idudalosti, s jakym predstihem, jak casto se bude opakovat)
+-- nastavi upominky k dane udalosti pro vsechny jeji ucastniky (idudalosti, s jakym predstihem, jak casto se bude opakovat)
 
 begin
 planovac_api.nastavUpo (998, 3, 2);
