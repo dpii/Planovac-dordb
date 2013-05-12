@@ -1,4 +1,4 @@
---Urci pocet uzivatelu v konkretni skupine, kteri maji nejakou udalost v zadanem rozmezi
+--Urci pocet udalosti v dane skupine uzivatelu a danem casovem rozmezi
 
 select count(*) from udalost ud, udalosti_uzivatelu uz, skupiny_uzivatelu su
 where su.idUzivatele = uz.iduzivatele

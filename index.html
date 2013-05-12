@@ -38,25 +38,25 @@ databáze CD/DVD, autobazary, apod.)
 
 <h2>3. Návrh API rozhraní „business logiky“ pro dva procesy</h2>
 <p>
-<b>Procedura:</b> nastavUpozorneniUdalostiProSkupinu <br />
-<b>Parametry:</b> idUdalosti, cas_pred_udalosti, opakovani_po_intervalu <br />
-<b>Popis:</b> Kdyz napr. vedouci skupiny vytvori udalost pro vsechny cleny skupiny, tato procedura nastavi i pripominku na tuto udalost. Vytvori ji kazdemu uzivateli v pozadovanem predstihu a prip. opakovani, kazdy uzivatel si ji pak dale muze zmenit. <br />
+<b>Procedura:</b> nastavUpo <br />
+<b>Parametry:</b> idUdalosti, predstih, opakovani <br />
+<b>Popis:</b> Nastaví upomínky všem uživatelům, kteří sdílí danou událost v daném předstihu od začátku události a daný interval opakování od první upomínky. <br />
 
 <br />
 
-<b>Procedura:</b> najdiUdalost <br />
-<b>Parametry:</b> zacatek, konec <br />
-<b>Popis:</b> Vyhleda udalosti, které se nacházejí v požadovaném intervalu. Např. vedoucí skupiny hledá vhodný termin. <br />
+<b>Procedura:</b> zjistiDostupnost <br />
+<b>Parametry:</b> idSkupiny, zacatek, konec <br />
+<b>Popis:</b> Vyhledá počet konfliktů (počet existujících událostí) v dané skupině uživatelů na základě zadaného časového intervalu.  <br />
 </p>
 
 <h2>4. Návrh pěti slovně formulovaných dotazů nad schématem</h2>
 <p>
 <ol>
-<li>Určí počet uživatelů, kteří mají v daný čas již vytvořenou událost v rámci skupiny</li>
+<li>Určí počet událostí v dané skupině uživatelé a daném časovém rozsahu</li>
 <li>Vypočte průměrný počet přípomínek uživatelů.</li>
 <li>Určí počet připomínek na danou událost</li>
-<li>Zjistí počet vedoucích skupin</li>
-<li>Vyhledá nejvyýše čtyři posledni události pro každého uživatele.</li>
+<li>Vyhledá 4 nejblížší události pro daného uživatele</li>
+<li>Pro každé město vypíše počet události, které se tam konaly</li>
 
 </ol>
 
@@ -77,12 +77,7 @@ databáze CD/DVD, autobazary, apod.)
 
 <h2>7. Skript, který naplní tabulky testovacími daty</h2>
 <p>
-<a href="sql/7_data_uzivatel.sql">7_data_uzivatel.sql</a><br />
-<a href="sql/7_data_skupina.sql">7_data_skupina.sql</a><br />
-<a href="sql/7_data_udalost.sql">7_data_udalost.sql</a><br />
-<a href="sql/7_data_skupiny_uzivatelu.sql">7_data_skupiny_uzivatelu.sql</a><br />
-<a href="sql/7_data_udalosti_uzivatelu.sql">7_data_udalosti_uzivatelu.sql</a><br />
-<a href="sql/7_data_adresa.sql">7_data_adresa.sql</a><br />
+<a href="sql/7_data_vsechno.sql">7_data_vsechno.sql</a><br />
 
 </p>
 
