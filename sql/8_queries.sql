@@ -250,27 +250,27 @@ Wichita                                     1
 
 Plan hash value: 1339327940
  
--------------------------------------------------------------------------------------------------
-| Id  | Operation                        | Name         | Rows  | Bytes | Cost (%CPU)| Time     |
--------------------------------------------------------------------------------------------------
-|   0 | SELECT STATEMENT                 |              |     1 |    69 |     5  (40)| 00:00:01 |
-|   1 |  SORT ORDER BY                   |              |     1 |    69 |     5  (40)| 00:00:01 |
-|   2 |   HASH GROUP BY                  |              |     1 |    69 |     5  (40)| 00:00:01 |
-|   3 |    NESTED LOOPS                  |              |       |       |            |          |
-|   4 |     NESTED LOOPS                 |              |     1 |    69 |     3   (0)| 00:00:01 |
-|   5 |      NESTED LOOPS                |              |     1 |    39 |     3   (0)| 00:00:01 |
-|   6 |       TABLE ACCESS FULL          | UDALOST      |     1 |    13 |     3   (0)| 00:00:01 |
-|   7 |       TABLE ACCESS BY INDEX ROWID| ADRESA       |     1 |    26 |     0   (0)| 00:00:01 |
-|*  8 |        INDEX UNIQUE SCAN         | PK_IDADRESYA |     1 |       |     0   (0)| 00:00:01 |
-|*  9 |      INDEX UNIQUE SCAN           | PK_PSCA      |     1 |       |     0   (0)| 00:00:01 |
-|  10 |     TABLE ACCESS BY INDEX ROWID  | MESTO        |     1 |    30 |     0   (0)| 00:00:01 |
--------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+| Id  | Operation                       | Name    | Rows  | Bytes | Cost (%CPU)| Time     |
+-------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT                |         |    96 |  2688 |    14  (29)| 00:00:01 |
+|   1 |  SORT ORDER BY                  |         |    96 |  2688 |    14  (29)| 00:00:01 |
+|   2 |   HASH GROUP BY                 |         |    96 |  2688 |    14  (29)| 00:00:01 |
+|*  3 |    HASH JOIN                    |         |   500 | 14000 |    12  (17)| 00:00:01 |
+|   4 |     TABLE ACCESS FULL           | UDALOST |   500 |  2000 |     3   (0)| 00:00:01 |
+|   5 |     MERGE JOIN                  |         |   515 | 12360 |     8  (13)| 00:00:01 |
+|   6 |      TABLE ACCESS BY INDEX ROWID| MESTO   |   102 |  1530 |     2   (0)| 00:00:01 |
+|   7 |       INDEX FULL SCAN           | PK_PSCA |   102 |       |     1   (0)| 00:00:01 |
+|*  8 |      SORT JOIN                  |         |   515 |  4635 |     6  (17)| 00:00:01 |
+|   9 |       TABLE ACCESS FULL         | ADRESA  |   515 |  4635 |     5   (0)| 00:00:01 |
+-------------------------------------------------------------------------------------------
  
 Predicate Information (identified by operation id):
 ---------------------------------------------------
  
-   8 - access("ADRESA"."IDADRESY"="UDALOST"."IDMISTAKONANI")
-   9 - access("MESTO"."PSC"="ADRESA"."PSC")
+   3 - access("ADRESA"."IDADRESY"="UDALOST"."IDMISTAKONANI")
+   8 - access("MESTO"."PSC"="ADRESA"."PSC")
+       filter("MESTO"."PSC"="ADRESA"."PSC")
 
 --Pro kazde mesto secte vsechny zucastneni uzivatelu na udalosti poradane v danem meste
 
