@@ -192,99 +192,104 @@ order by count(ud.idudalosti) desc;
 
 Autotrace Enabled
 Shows the execution plan as well as statistics of the statement.
-NAZEVMESTA                               POCET_UDALOSTI
----------------------------------------- --------------
-Port Washington                                      19 
-Binghamton                                           19 
-Ogdensburg                                           16 
-Effingham                                            15 
-Minnetonka                                           15 
-Sitka                                                14 
-Atlanta                                              13 
-Winooski                                             12 
-Sandy Springs                                        11 
-Lynchburg                                            11 
-Enfield                                              10 
-Lawndale                                             10 
-Oneida                                               10 
-Plainfield                                           10 
-West Springfield                                      9 
-Sturgis                                               9 
-Melrose                                               9 
-Fitchburg                                             9 
-Nenana                                                8 
-San Francisco                                         8 
-Newport News                                          7 
-Chico                                                 7 
-Glen Cove                                             7 
-Simi Valley                                           7 
-Uniontown                                             7 
-Rehoboth Beach                                        7 
-Fairbanks                                             7 
-Dodge City                                            6 
-Olean                                                 6 
-Joliet                                                6 
-San Antonio                                           6 
-Lynn                                                  6 
-Texarkana                                             5 
-Fallon                                                5 
-Monterey                                              5 
-Davis                                                 5 
-Agat                                                  5 
-Easthampton                                           5 
-Athens                                                5 
-La Cañada Flintridge                                  5 
-El Paso                                               5 
-Valparaiso                                            5 
-North Adams                                           5 
-Frisco                                                4 
-New Castle                                            4 
-Medford                                               4 
-Fredericksburg                                        4 
-Alameda                                               4 
-Ventura                                               4 
-La Habra Heights                                      4 
-Marietta                                              4 
-Aberdeen                                              4 
-Holyoke                                               4 
-Irwindale                                             4 
-Grand Forks                                           4 
-Sonoma                                                3 
-Wisconsin Rapids                                      3 
-Niagara Falls                                         3 
-Guánica                                               3 
-Jeffersontown                                         3 
-Charlotte Amalie                                      3 
-Raleigh                                               3 
-Idaho Springs                                         3 
-Bentonville                                           3 
-Concord                                               3 
-Warwick                                               3 
-Shreveport                                            3 
-Christiansted                                         3 
-Lomita                                                3 
-Kenosha                                               3 
-Miami Gardens                                         3 
-Montpelier                                            3 
-Hayward                                               2 
-DeKalb                                                2 
-Bartlesville                                          2 
-Hermitage                                             2 
-Twin Falls                                            2 
-Gulfport                                              2 
-Columbus                                              2 
-Ketchikan                                             2 
-Wheeling                                              2 
-Chandler                                              2 
-Phoenix                                               2 
-Harrisburg                                            2 
-Macon                                                 2 
-Missoula                                              1 
-Crown Point                                           1 
-Wichita                                               1 
-Idabel                                                1 
+NAZEVMESTA                     POCET_UDALOSTI
+------------------------------ --------------
+Port Washington                            19 
+Ogdensburg                                 16 
+Effingham                                  15 
+Sitka                                      14 
+Atlanta                                    13 
+Winooski                                   12 
+Lynchburg                                  11 
+Sandy Springs                              11 
+Binghamton                                 10 
+Oneida                                     10 
+Plainfield                                 10 
+Lawndale                                   10 
+New Binghamton                              9 
+Sturgis                                     9 
+Melrose                                     9 
+Fitchburg                                   9 
+West Springfield                            9 
+San Francisco                               8 
+Nenana                                      8 
+New Minnetonka                              8 
+Newport News                                7 
+Fairbanks                                   7 
+Uniontown                                   7 
+Rehoboth Beach                              7 
+Glen Cove                                   7 
+Simi Valley                                 7 
+Lynn                                        6 
+Olean                                       6 
+San Antonio                                 6 
+Joliet                                      6 
+Dodge City                                  6 
+Minnetonka                                  6 
+Enfield                                     5 
+La Ca?ada Flintridge                        5 
+North Adams                                 5 
+Fallon                                      5 
+Monterey                                    5 
+Athens                                      5 
+New Enfield                                 5 
+Davis                                       5 
+Easthampton                                 5 
+Texarkana                                   5 
+Chico                                       5 
+Valparaiso                                  5 
+El Paso                                     5 
+Agat                                        5 
+Medford                                     4 
+New Castle                                  4 
+La Habra Heights                            4 
+Alameda                                     4 
+Holyoke                                     4 
+Frisco                                      4 
+Ventura                                     4 
+Grand Forks                                 4 
+Marietta                                    4 
+Aberdeen                                    4 
+Fredericksburg                              4 
+Irwindale                                   4 
+Wisconsin Rapids                            3 
+Montpelier                                  3 
+Niagara Falls                               3 
+Guánica                                     3 
+Raleigh                                     3 
+Charlotte Amalie                            3 
+Jeffersontown                               3 
+Idaho Springs                               3 
+Bentonville                                 3 
+Warwick                                     3 
+Concord                                     3 
+Shreveport                                  3 
+Kenosha                                     3 
+Christiansted                               3 
+Lomita                                      3 
+Miami Gardens                               3 
+Sonoma                                      3 
+Hayward                                     2 
+Twin Falls                                  2 
+Bartlesville                                2 
+Hermitage                                   2 
+Chandler                                    2 
+Wheeling                                    2 
+DeKalb                                      2 
+Phoenix                                     2 
+Macon                                       2 
+Harrisburg                                  2 
+Gulfport                                    2 
+Columbus                                    2 
+Ketchikan                                   2 
+New Chico                                   2 
+Idabel                                      1 
+Missoula                                    1 
+Crown Point                                 1 
+Old Minnetonka                              1 
+Wichita                                     1 
 
- 89 rows selected 
+ 94 rows selected 
 
 Plan hash value: 2601982191
  
@@ -329,92 +334,95 @@ order by count(ud.idudalosti) desc;
 
 Autotrace Enabled
 Shows the execution plan as well as statistics of the statement.
-NAZEVMESTA                               POCET_NAVSTEVNIKU
----------------------------------------- -----------------
-Sitka                                                   20 
-Port Washington                                         19 
-Binghamton                                              19 
-Ogdensburg                                              18 
-Lynchburg                                               18 
-Minnetonka                                              18 
-Sandy Springs                                           15 
-Atlanta                                                 15 
-Winooski                                                15 
-Lawndale                                                13 
-Nenana                                                  13 
-Effingham                                               12 
-Oneida                                                  12 
-Sturgis                                                 10 
-Fairbanks                                               10 
-San Antonio                                             10 
-Jeffersontown                                            9 
-Melrose                                                  9 
-Marietta                                                 9 
-Fitchburg                                                9 
-Agat                                                     9 
-Uniontown                                                8 
-Monterey                                                 8 
-Newport News                                             7 
-Athens                                                   7 
-West Springfield                                         7 
-Enfield                                                  7 
-Plainfield                                               7 
-La Cañada Flintridge                                     6 
-Simi Valley                                              6 
-San Francisco                                            6 
-Lynn                                                     6 
-Glen Cove                                                6 
-El Paso                                                  6 
-Chico                                                    6 
-Irwindale                                                5 
-Aberdeen                                                 5 
-Sonoma                                                   5 
-Concord                                                  5 
-Dodge City                                               5 
-Easthampton                                              5 
-Frisco                                                   4 
-Rehoboth Beach                                           4 
-Christiansted                                            4 
-Holyoke                                                  4 
-Medford                                                  4 
-New Castle                                               4 
-North Adams                                              3 
-Twin Falls                                               3 
-Fredericksburg                                           3 
-Lomita                                                   3 
-Ventura                                                  3 
-Texarkana                                                3 
-La Habra Heights                                         3 
-Grand Forks                                              3 
-Hayward                                                  2 
-Bartlesville                                             2 
-Hermitage                                                2 
-Fallon                                                   2 
-Guánica                                                  2 
-Charlotte Amalie                                         2 
-Olean                                                    2 
-Raleigh                                                  2 
-Idaho Springs                                            2 
-Bentonville                                              2 
-Davis                                                    2 
-Chandler                                                 2 
-Warwick                                                  2 
-Shreveport                                               2 
-Joliet                                                   2 
-Macon                                                    2 
-Valparaiso                                               2 
-Ketchikan                                                2 
-Kenosha                                                  2 
-Wisconsin Rapids                                         1 
-Idabel                                                   1 
-Alameda                                                  1 
-Miami Gardens                                            1 
-Phoenix                                                  1 
-Gulfport                                                 1 
-Columbus                                                 1 
-Missoula                                                 1 
+NAZEVMESTA                     POCET_NAVSTEVNIKU
+------------------------------ -----------------
+Sitka                                         20 
+Port Washington                               19 
+Ogdensburg                                    18 
+Lynchburg                                     18 
+Sandy Springs                                 15 
+Atlanta                                       15 
+Winooski                                      15 
+Nenana                                        13 
+Lawndale                                      13 
+New Minnetonka                                12 
+Oneida                                        12 
+Effingham                                     12 
+New Binghamton                                10 
+Sturgis                                       10 
+Fairbanks                                     10 
+San Antonio                                   10 
+Binghamton                                     9 
+Jeffersontown                                  9 
+Marietta                                       9 
+Fitchburg                                      9 
+Melrose                                        9 
+Agat                                           9 
+Uniontown                                      8 
+Monterey                                       8 
+West Springfield                               7 
+Plainfield                                     7 
+Athens                                         7 
+Newport News                                   7 
+La Ca?ada Flintridge                           6 
+Lynn                                           6 
+San Francisco                                  6 
+El Paso                                        6 
+Simi Valley                                    6 
+Chico                                          6 
+Glen Cove                                      6 
+Minnetonka                                     6 
+Sonoma                                         5 
+Easthampton                                    5 
+Aberdeen                                       5 
+Irwindale                                      5 
+Dodge City                                     5 
+Concord                                        5 
+Medford                                        4 
+New Castle                                     4 
+Rehoboth Beach                                 4 
+New Enfield                                    4 
+Christiansted                                  4 
+Frisco                                         4 
+Holyoke                                        4 
+Enfield                                        3 
+Twin Falls                                     3 
+North Adams                                    3 
+La Habra Heights                               3 
+Fredericksburg                                 3 
+Texarkana                                      3 
+Grand Forks                                    3 
+Lomita                                         3 
+Ventura                                        3 
+Hayward                                        2 
+Valparaiso                                     2 
+Fallon                                         2 
+Guánica                                        2 
+Hermitage                                      2 
+Raleigh                                        2 
+Charlotte Amalie                               2 
+Olean                                          2 
+Chandler                                       2 
+Davis                                          2 
+Idaho Springs                                  2 
+Bentonville                                    2 
+Warwick                                        2 
+Joliet                                         2 
+Macon                                          2 
+Shreveport                                     2 
+Kenosha                                        2 
+Ketchikan                                      2 
+Bartlesville                                   2 
+Wisconsin Rapids                               1 
+Idabel                                         1 
+Missoula                                       1 
+Miami Gardens                                  1 
+Phoenix                                        1 
+Gulfport                                       1 
+Columbus                                       1 
+Alameda                                        1 
 
- 82 rows selected 
+ 85 rows selected 
 
 Plan hash value: 3308389884
  
