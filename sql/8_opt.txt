@@ -1,11 +1,11 @@
-> set AUTotrace on
+> set AUTotrace ON
 Autotrace Enabled
 Shows the execution plan as well as statistics of the statement.
-> SELECT ud.nazev, ud.zacatek, ud.konec, me.nazevmesta 
-FROM udalosti_uzivatelu uz, udalost ud, adresa ad, mesto me 
-where me.psc = ad.psc and ud.idmistakonani = ad.idadresy 
-and uz.idudalosti = ud.idudalosti and uz.iduzivatele = '674' 
-and rownum < 5 order by ud.zacatek
+> SELECT ud.nazev, ud.zacatek, ud.konec, me.nazevmesta
+FROM udalosti_uzivatelu uz, udalost ud, adresa ad, mesto me
+WHERE me.psc = ad.psc AND ud.idmistakonani = ad.idadresy
+AND uz.idudalosti = ud.idudalosti AND uz.iduzivatele = '674'
+AND ROWNUM < 5 ORDER BY ud.zacatek
 NAZEV                          ZACATEK  KONEC    NAZEVMESTA                   
 ------------------------------ -------- -------- ------------------------------
 Pellentesque                   29.03.14 29.03.14 Sandy Springs                  
@@ -13,47 +13,45 @@ dolor.                         12.04.14 12.04.14 Grand Forks
 gravida.                       13.04.14 13.04.14 Oneida                         
 at                             16.04.14 16.04.14 Melrose                        
 
-Plan hash value: 1989132493
+Plan hash value: 144155093
  
----------------------------------------------------------------------------------------------------
-| Id  | Operation                         | Name          | Rows  | Bytes | Cost (%CPU)| Time     |
----------------------------------------------------------------------------------------------------
-|   0 | SELECT STATEMENT                  |               |     1 |   143 |     3  (34)| 00:00:01 |
-|   1 |  SORT ORDER BY                    |               |     1 |   143 |     3  (34)| 00:00:01 |
-|*  2 |   COUNT STOPKEY                   |               |       |       |            |          |
-|   3 |    NESTED LOOPS                   |               |       |       |            |          |
-|   4 |     NESTED LOOPS                  |               |     1 |   143 |     2   (0)| 00:00:01 |
-|   5 |      NESTED LOOPS                 |               |     1 |   113 |     2   (0)| 00:00:01 |
-|   6 |       NESTED LOOPS                |               |     1 |    87 |     2   (0)| 00:00:01 |
-|*  7 |        INDEX FAST FULL SCAN       | UC_UDALUZIV   |     1 |    26 |     2   (0)| 00:00:01 |
-|   8 |        TABLE ACCESS BY INDEX ROWID| UDALOST       |     1 |    61 |     0   (0)| 00:00:01 |
-|*  9 |         INDEX UNIQUE SCAN         | PK_IDUDALOSTI |     1 |       |     0   (0)| 00:00:01 |
-|  10 |       TABLE ACCESS BY INDEX ROWID | ADRESA        |     1 |    26 |     0   (0)| 00:00:01 |
-|* 11 |        INDEX UNIQUE SCAN          | PK_IDADRESYA  |     1 |       |     0   (0)| 00:00:01 |
-|* 12 |      INDEX UNIQUE SCAN            | PK_PSCA       |     1 |       |     0   (0)| 00:00:01 |
-|  13 |     TABLE ACCESS BY INDEX ROWID   | MESTO         |     1 |    30 |     0   (0)| 00:00:01 |
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+| Id  | Operation                        | Name         | Rows  | Bytes | Cost (%CPU)| Time     |
+-------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT                 |              |     2 |   126 |     8  (13)| 00:00:01 |
+|   1 |  SORT ORDER BY                   |              |     2 |   126 |     8  (13)| 00:00:01 |
+|*  2 |   COUNT STOPKEY                  |              |       |       |            |          |
+|   3 |    NESTED LOOPS                  |              |       |       |            |          |
+|   4 |     NESTED LOOPS                 |              |     2 |   126 |     7   (0)| 00:00:01 |
+|   5 |      NESTED LOOPS                |              |     2 |    96 |     5   (0)| 00:00:01 |
+|   6 |       NESTED LOOPS               |              |     2 |    78 |     3   (0)| 00:00:01 |
+|   7 |        TABLE ACCESS FULL         | UDALOST      |   500 | 15500 |     3   (0)| 00:00:01 |
+|*  8 |        INDEX UNIQUE SCAN         | UC_UDALUZIV  |     1 |     8 |     0   (0)| 00:00:01 |
+|   9 |       TABLE ACCESS BY INDEX ROWID| ADRESA       |     1 |     9 |     1   (0)| 00:00:01 |
+|* 10 |        INDEX UNIQUE SCAN         | PK_IDADRESYA |     1 |       |     0   (0)| 00:00:01 |
+|* 11 |      INDEX UNIQUE SCAN           | PK_PSCA      |     1 |       |     0   (0)| 00:00:01 |
+|  12 |     TABLE ACCESS BY INDEX ROWID  | MESTO        |     1 |    15 |     1   (0)| 00:00:01 |
+-------------------------------------------------------------------------------------------------
  
 Predicate Information (identified by operation id):
 ---------------------------------------------------
  
    2 - filter(ROWNUM<5)
-   7 - filter("UZ"."IDUZIVATELE"=674)
-   9 - access("UZ"."IDUDALOSTI"="UD"."IDUDALOSTI")
-  11 - access("UD"."IDMISTAKONANI"="AD"."IDADRESY")
-  12 - access("ME"."PSC"="AD"."PSC")
+   8 - access("UZ"."IDUDALOSTI"="UD"."IDUDALOSTI" AND "UZ"."IDUZIVATELE"=674)
+  10 - access("UD"."IDMISTAKONANI"="AD"."IDADRESY")
+  11 - access("ME"."PSC"="AD"."PSC")
 
 Unable to gather statistics please unsure user has correct access.
 The statistic feature requires that the user is granted select on v_$sesstat, v_$statname and v_$session.
-> SELECT ud.nazev, ud.zacatek, ud.konec, me.nazevmesta 
-FROM uzivatel uziv 
-join udalosti_uzivatelu uz on uziv.iduzivatele = uz.iduzivatele
-join udalost ud on uz.idudalosti = ud.idudalosti 
-join adresa ad on ud.idmistakonani = ad.idadresy 
-join mesto me on me.psc = ad.psc
-where uziv.iduzivatele = '674' 
-and rownum < 5 
-order by ud.zacatek
+> SELECT ud.nazev, ud.zacatek, ud.konec, me.nazevmesta
+FROM uzivatel uziv
+join udalosti_uzivatelu uz ON uziv.iduzivatele = uz.iduzivatele
+join udalost ud ON uz.idudalosti = ud.idudalosti
+join adresa ad ON ud.idmistakonani = ad.idadresy
+join mesto me ON me.psc = ad.psc
+WHERE uziv.iduzivatele = '674'
+AND ROWNUM < 5
+ORDER BY ud.zacatek
 NAZEV                          ZACATEK  KONEC    NAZEVMESTA                   
 ------------------------------ -------- -------- ------------------------------
 Pellentesque                   29.03.14 29.03.14 Sandy Springs                  
@@ -61,35 +59,33 @@ dolor.                         12.04.14 12.04.14 Grand Forks
 gravida.                       13.04.14 13.04.14 Oneida                         
 at                             16.04.14 16.04.14 Melrose                        
 
-Plan hash value: 1989132493
+Plan hash value: 144155093
  
----------------------------------------------------------------------------------------------------
-| Id  | Operation                         | Name          | Rows  | Bytes | Cost (%CPU)| Time     |
----------------------------------------------------------------------------------------------------
-|   0 | SELECT STATEMENT                  |               |     1 |   143 |     3  (34)| 00:00:01 |
-|   1 |  SORT ORDER BY                    |               |     1 |   143 |     3  (34)| 00:00:01 |
-|*  2 |   COUNT STOPKEY                   |               |       |       |            |          |
-|   3 |    NESTED LOOPS                   |               |       |       |            |          |
-|   4 |     NESTED LOOPS                  |               |     1 |   143 |     2   (0)| 00:00:01 |
-|   5 |      NESTED LOOPS                 |               |     1 |   113 |     2   (0)| 00:00:01 |
-|   6 |       NESTED LOOPS                |               |     1 |    87 |     2   (0)| 00:00:01 |
-|*  7 |        INDEX FAST FULL SCAN       | UC_UDALUZIV   |     1 |    26 |     2   (0)| 00:00:01 |
-|   8 |        TABLE ACCESS BY INDEX ROWID| UDALOST       |     1 |    61 |     0   (0)| 00:00:01 |
-|*  9 |         INDEX UNIQUE SCAN         | PK_IDUDALOSTI |     1 |       |     0   (0)| 00:00:01 |
-|  10 |       TABLE ACCESS BY INDEX ROWID | ADRESA        |     1 |    26 |     0   (0)| 00:00:01 |
-|* 11 |        INDEX UNIQUE SCAN          | PK_IDADRESYA  |     1 |       |     0   (0)| 00:00:01 |
-|* 12 |      INDEX UNIQUE SCAN            | PK_PSCA       |     1 |       |     0   (0)| 00:00:01 |
-|  13 |     TABLE ACCESS BY INDEX ROWID   | MESTO         |     1 |    30 |     0   (0)| 00:00:01 |
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+| Id  | Operation                        | Name         | Rows  | Bytes | Cost (%CPU)| Time     |
+-------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT                 |              |     2 |   126 |     8  (13)| 00:00:01 |
+|   1 |  SORT ORDER BY                   |              |     2 |   126 |     8  (13)| 00:00:01 |
+|*  2 |   COUNT STOPKEY                  |              |       |       |            |          |
+|   3 |    NESTED LOOPS                  |              |       |       |            |          |
+|   4 |     NESTED LOOPS                 |              |     2 |   126 |     7   (0)| 00:00:01 |
+|   5 |      NESTED LOOPS                |              |     2 |    96 |     5   (0)| 00:00:01 |
+|   6 |       NESTED LOOPS               |              |     2 |    78 |     3   (0)| 00:00:01 |
+|   7 |        TABLE ACCESS FULL         | UDALOST      |   500 | 15500 |     3   (0)| 00:00:01 |
+|*  8 |        INDEX UNIQUE SCAN         | UC_UDALUZIV  |     1 |     8 |     0   (0)| 00:00:01 |
+|   9 |       TABLE ACCESS BY INDEX ROWID| ADRESA       |     1 |     9 |     1   (0)| 00:00:01 |
+|* 10 |        INDEX UNIQUE SCAN         | PK_IDADRESYA |     1 |       |     0   (0)| 00:00:01 |
+|* 11 |      INDEX UNIQUE SCAN           | PK_PSCA      |     1 |       |     0   (0)| 00:00:01 |
+|  12 |     TABLE ACCESS BY INDEX ROWID  | MESTO        |     1 |    15 |     1   (0)| 00:00:01 |
+-------------------------------------------------------------------------------------------------
  
 Predicate Information (identified by operation id):
 ---------------------------------------------------
  
    2 - filter(ROWNUM<5)
-   7 - filter("UZ"."IDUZIVATELE"=674)
-   9 - access("UZ"."IDUDALOSTI"="UD"."IDUDALOSTI")
-  11 - access("UD"."IDMISTAKONANI"="AD"."IDADRESY")
-  12 - access("ME"."PSC"="AD"."PSC")
+   8 - access("UZ"."IDUDALOSTI"="UD"."IDUDALOSTI" AND "UZ"."IDUZIVATELE"=674)
+  10 - access("UD"."IDMISTAKONANI"="AD"."IDADRESY")
+  11 - access("ME"."PSC"="AD"."PSC")
 
 Unable to gather statistics please unsure user has correct access.
 The statistic feature requires that the user is granted select on v_$sesstat, v_$statname and v_$session.
