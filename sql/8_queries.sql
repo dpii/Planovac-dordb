@@ -272,7 +272,7 @@ Predicate Information (identified by operation id):
    8 - access("MESTO"."PSC"="ADRESA"."PSC")
        filter("MESTO"."PSC"="ADRESA"."PSC")
 
---Pro kazde mesto secte vsechny zucastneni uzivatelu na udalosti poradane v danem meste
+-- Urci ucast na udalostech v kazdem meste
 
 select mesto.nazevmesta, count(idUzivatele) as pocet_navstevniku
 from udalost, adresa, mesto, udalosti_uzivatelu
